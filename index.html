@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saurabh Kore | Data Analyst Portfolio</title>
+    <style>
+        #skillsChart {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .chart-circle {
+            position: relative !important;
+            margin: 10px;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+
+        .chart-circle:hover {
+            transform: scale(1.05);
+        }
+
+        .chart-circle::before {
+            content: attr(data-name);
+            position: absolute;
+            bottom: -25px;
+            width: 100%;
+            text-align: center;
+            font-size: 0.9rem;
+            color: var(--text-color);
+        }
+    </style>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <nav>
+                <a href="#" class="logo">SAURABH KORE</a>
+                <ul class="nav-links">
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li>
+                        <button class="theme-toggle" id="theme-toggle">
+                            <span id="theme-icon">🌙</span>
+                        </button>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Saurabh Kore</h1>
+                <h2>Data Analyst | Dashboard Developer | Problem Solver</h2>
+                <p>Specialized in transforming raw data into powerful business insights. Experienced with SQL, Python, Power BI, and Excel to help organizations make informed, data-driven decisions.</p>
+                <div>
+                    <a href="#projects" class="btn">View My Work</a>
+                    <a href="#contact" class="btn btn-outline">Get In Touch</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-content">
+                <div class="about-text animate-on-scroll">
+                    <p>Detail-oriented and motivated Data Analyst with strong skills in data cleansing, preprocessing, and automation. Experienced in creating actionable dashboards and reports using Power BI, Excel, and Python.</p>
+                    <br>
+                    <p>What sets me apart is my ability to communicate complex findings in simple, compelling ways. I believe data analysis isn't just about numbers—it's about telling stories that influence business strategy and drive real change.</p>
+                    <br>
+                    <p>Quick learner and problem solver, I enjoy simplifying complex datasets to drive impactful business outcomes.</p>
+                </div>
+                <div class="skills-chart animate-on-scroll" id="skillsChart"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+        <div class="container">
+            <h2 class="section-title">My Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-card animate-on-scroll"><div class="skill-icon">🧠</div><h3 class="skill-name">Python</h3><p>Pandas, NumPy, Matplotlib, Seaborn</p></div>
+                <div class="skill-card animate-on-scroll"><div class="skill-icon">🧮</div><h3 class="skill-name">SQL</h3><p>MySQL, MS SQL Server</p></div>
+                <div class="skill-card animate-on-scroll"><div class="skill-icon">📊</div><h3 class="skill-name">Data Visualization</h3><p>Power BI, Tableau</p></div>
+                <div class="skill-card animate-on-scroll"><div class="skill-icon">📈</div><h3 class="skill-name">Excel</h3><p>Power Query, Power Pivot, DAX</p></div>
+                <div class="skill-card animate-on-scroll"><div class="skill-icon">☁️</div><h3 class="skill-name">Cloud</h3><p>AWS, Snowflake</p></div>
+                <div class="skill-card animate-on-scroll"><div class="skill-icon">🛠️</div><h3 class="skill-name">ETL & Automation</h3><p>Data Onboarding, Data Validation</p></div>
+                <div class="skill-card animate-on-scroll"><div class="skill-icon">📝</div><h3 class="skill-name">Storytelling</h3><p>Business Reports, Presentations</p></div>
+                <div class="skill-card animate-on-scroll"><div class="skill-icon">🔍</div><h3 class="skill-name">Data Mining</h3><p>SQL, Web Scraping</p></div>
+                <div class="skill-card animate-on-scroll"><div class="skill-icon">🤖</div><h3 class="skill-name">Machine Learning</h3><p>Scikit-learn, TensorFlow</p></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <h2 class="section-title">My Projects</h2>
+            <div class="projects-container">
+                <div class="project-card animate-on-scroll">
+                    <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="Churn Prediction" class="project-img">
+                    <div class="project-content">
+                        <h3 class="project-title">Customer Churn Prediction</h3>
+                        <p class="project-description">Machine learning model predicting customer churn with 89% accuracy, helping reduce attrition by 23% through targeted retention strategies.</p>
+                        <div class="project-tags">
+                            <span class="tag">Python</span>
+                            <span class="tag">Scikit-learn</span>
+                            <span class="tag">Pandas</span>
+                        </div>
+                        <a href="https://github.com/saurabhkore1556/Customer_churn_ml_model.git" class="btn">View Details</a>
+                    </div>
+                </div>
+                
+
+
+                <div class="project-card animate-on-scroll">
+                    <img src="https://miro.medium.com/v2/resize:fit:1400/format:webp/1*tXebY1em0eMSkMOjcvUEkA.png" alt="Supply Chain Management" class="project-img">
+                    <div class="project-content">
+                        <h3 class="project-title">Supply Chain Management</h3> 
+                        <p class="project-description">Built real-time dashboard integrating Snowflake & Power BI. Optimized queries and implemented ETL processes to handle 1M+ records with 99% accuracy.</p>
+                        <div class="project-tags">
+                            <span class="tag">Snowflake</span>
+                            <span class="tag">SQL</span>
+                            <span class="tag">Power BI</span>
+                        </div>
+                        <a href="https://github.com/saurabhkore1556/Supply_chain_Analytics" class="btn">View Details</a>
+                    </div>
+                </div>
+                <div class="project-card animate-on-scroll">
+                    <img src="https://images.unsplash.com/photo-1542744095-291d1f67b221" alt="Sales Forecasting" class="project-img">
+                    <div class="project-content">
+                        <h3 class="project-title">Sales Forecasting</h3>
+                        <p class="project-description">Used historical sales data to predict future revenue trends. Applied Python and statistical models to help reduce inventory overstocking.</p>
+                        <div class="project-tags">
+                            <span class="tag">Python</span>
+                            <span class="tag">Pandas</span>
+                            <span class="tag">Seaborn</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">Get In Touch</h2>
+            <div class="contact-container">
+                <div class="contact-info animate-on-scroll">
+                    <p>Feel free to reach out for opportunities, projects, or a quick hello!</p>
+                    <div class="contact-item"><span class="contact-icon">📧</span><span>saurabhkore300@gmail.com</span></div>
+                    <div class="contact-item"><span class="contact-icon">📱</span><span>+91 7499994238</span></div>
+                    <div class="contact-item"><span class="contact-icon">📍</span><span>Pune, India</span></div>
+                </div>
+                <form class="contact-form animate-on-scroll">
+                    <div class="form-group"><input type="text" class="form-input" placeholder="Your Name" required></div>
+                    <div class="form-group"><input type="email" class="form-input" placeholder="Your Email" required></div>
+                    <div class="form-group"><input type="text" class="form-input" placeholder="Subject"></div>
+                    <div class="form-group"><textarea class="form-input" placeholder="Your Message" required></textarea></div>
+                    <button type="submit" class="btn">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="social-links">
+                <a href="https://linkedin.com/in/saurabh-kore-7499sk" class="social-link">in</a>
+                <a href="https://github.com/saurabhkore1556" class="social-link">git</a>
+                <a href="https://wa.me/qr/Y5YOAHZVTIYJL1 " class  ="social-link">wt</a>
+            </div>
+            <p>&copy; 2025 Saurabh Kore. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
